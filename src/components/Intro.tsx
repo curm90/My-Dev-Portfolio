@@ -2,6 +2,10 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
+import { HiDownload } from 'react-icons/hi';
+import { FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
   return (
@@ -44,6 +48,45 @@ export default function Intro() {
         <span className='italic'>scalable web applications.</span> I specialize in creating{' '}
         <span className='italic underline'>React (Next.js)</span>
       </motion.p>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className='flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium text-gray-700 sm:flex-row'
+      >
+        <Link
+          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-gray-50 shadow-lg outline-none transition hover:scale-105 hover:bg-gray-800 focus:scale-105 active:scale-100'
+          href='#contact'
+        >
+          Contact me here{' '}
+          <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
+        </Link>
+        <a
+          href='/cv.pdf'
+          download
+          className='group flex cursor-pointer items-center gap-2 rounded-full bg-gray-50 px-7 py-3 shadow-lg transition hover:scale-105 hover:text-gray-950 focus:scale-105 active:scale-100'
+        >
+          Download CV <HiDownload className='opacity-60 transition group-hover:translate-y-1' />
+        </a>
+        <div className='flex items-center gap-2'>
+          <a
+            href='https://www.linkedin.com/in/liam-sutton90/'
+            rel='noreferer'
+            target='_blank'
+            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15]'
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href='https://github.com/curm90'
+            rel='noreferer'
+            target='_blank'
+            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15]'
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 }
