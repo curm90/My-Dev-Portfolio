@@ -37,7 +37,7 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
-      <motion.p
+      <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         className='mx-auto my-8 max-w-[60rem] text-center text-2xl sm:text-4xl'
@@ -47,7 +47,7 @@ export default function Intro() {
         <span className='font-bold'>5 years</span> of experience building dynamic and{' '}
         <span className='italic'>scalable web applications.</span> I specialize in creating{' '}
         <span className='italic underline'>React (Next.js)</span>
-      </motion.p>
+      </motion.h1>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
