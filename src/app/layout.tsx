@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import BgEffect from '@/components/BgEffect';
+import Header from '@/components/Header';
 import './globals.css';
 
 const geistSans = localFont({
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable} relative bg-gray-50 antialiased`}>
         <BgEffect />
+        <Header />
         {children}
       </body>
     </html>
