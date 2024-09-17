@@ -1,7 +1,17 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import SectionHeader from './SectionHeader';
+
 export default function About() {
   return (
-    <section className='mb-28 max-w-[45rem] text-center text-lg leading-8 text-gray-700'>
-      <h2 className='mb-8 text-3xl font-medium capitalize text-gray-950'>About me</h2>
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.175 }}
+      className='mb-28 mt-28 max-w-[45rem] text-center text-lg leading-8 text-gray-700 sm:mt-0'
+    >
+      <SectionHeader header='About me' />
       <p className='mb-3'>
         I&apos;m a graduate of{' '}
         <a
@@ -25,6 +35,6 @@ export default function About() {
         <span className='italic'>Outside of coding</span>, I&apos;m passionate about reading,
         cooking, going on mountain hikes, working out, and I&apos;m a bit of a documentary nut too.
       </p>
-    </section>
+    </motion.section>
   );
 }
