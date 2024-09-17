@@ -11,7 +11,7 @@ export default function Intro() {
   return (
     <section>
       <div className='flex items-center justify-center'>
-        <div className='relative'>
+        <div className='relative -z-10'>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -45,7 +45,7 @@ export default function Intro() {
         <span className='font-bold'>Hi, I&apos;m Liam.</span> I&apos;m a{' '}
         <span className='font-bold'>full-stack developer</span> with{' '}
         <span className='font-bold'>5 years</span> of experience building dynamic and{' '}
-        <span className='italic'>scalable web applications.</span> I specialize in creating{' '}
+        <span className='italic'>scalable web applications.</span> I specialize in{' '}
         <span className='italic underline'>React (Next.js)</span>
       </motion.h1>
       <motion.div
