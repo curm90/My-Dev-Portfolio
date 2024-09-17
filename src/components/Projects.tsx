@@ -10,13 +10,13 @@ import Project from './Project';
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.25 });
-  const { setActiveTab } = useActiveSectionContext();
+  const { setActiveTab, timeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && Date.now() - timeOfLastClick > 1000) {
       setActiveTab('Projects');
     }
-  }, [isInView, setActiveTab]);
+  }, [isInView, setActiveTab, timeOfLastClick]);
 
   return (
     <section ref={ref} id='projects' className='mb-8 scroll-mt-28'>

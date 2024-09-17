@@ -12,13 +12,13 @@ import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
 export default function Intro() {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.5 });
-  const { setActiveTab } = useActiveSectionContext();
+  const { setActiveTab, timeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && Date.now() - timeOfLastClick > 1000) {
       setActiveTab('Home');
     }
-  }, [isInView, setActiveTab]);
+  }, [isInView, setActiveTab, timeOfLastClick]);
 
   return (
     <section ref={ref} id='home' className='scroll-mt-96'>

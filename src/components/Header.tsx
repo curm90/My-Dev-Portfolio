@@ -7,7 +7,7 @@ import { links } from '@/lib/data';
 import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
 
 export default function Header() {
-  const { setActiveTab, activeTab } = useActiveSectionContext();
+  const { setActiveTab, activeTab, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <header className='relative z-[999]'>
@@ -21,7 +21,10 @@ export default function Header() {
           {links.map((link) => (
             <motion.li className='relative flex h-3/4 items-center justify-center' key={link.link}>
               <Link
-                onClick={() => setActiveTab(link.name)}
+                onClick={() => {
+                  setActiveTab(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
                 className={clsx('p-3 transition hover:text-gray-900', {
                   'text-gray-900': activeTab === link.name,
                 })}
