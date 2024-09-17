@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import BgEffect from '@/components/BgEffect';
 import Header from '@/components/Header';
+import ActiveSectionContextProvider from './contexts/ActiveSection';
 import './globals.css';
 
 const geistSans = localFont({
@@ -32,8 +33,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} relative bg-gray-50 pt-28 antialiased sm:pt-36`}
       >
         <BgEffect />
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
