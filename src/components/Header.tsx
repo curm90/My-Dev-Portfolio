@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className='relative z-[999px]'>
+    <header className='relative z-[999]'>
       <motion.div
         initial={{ y: -100, x: '-50%', opacity: 0 }}
         animate={{ y: 0, x: '-50%', opacity: 1 }}

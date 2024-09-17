@@ -6,10 +6,11 @@ import SectionHeader from './SectionHeader';
 export default function About() {
   return (
     <motion.section
+      id='about'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className='mb-28 mt-28 max-w-[45rem] text-center text-lg leading-8 text-gray-700 sm:mt-0'
+      className='mb-28 max-w-[45rem] scroll-mt-28 text-center text-lg leading-8 text-gray-700 sm:mt-0'
     >
       <SectionHeader header='About me' />
       <p className='mb-3'>
