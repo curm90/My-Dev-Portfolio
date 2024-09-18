@@ -50,21 +50,21 @@ export const projects = [
   {
     name: 'Supernova Dental',
     description:
-      'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience. The site is optimized for performance and SEO, ensuring both functionality and visibility.',
+      'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience.',
     tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     image: SupernovaImg,
   },
   {
     name: 'Social Ai',
     description:
-      'A web app designed to track and analyze crypto wallet activity. Users can monitor wallet balances, transactions, and performance trends over time, providing an in-depth view of their cryptocurrency portfolio.',
+      'A web app designed to track and analyze crypto wallet activity. Users can monitor wallet balances, transactions, and performance trends over time.',
     tags: ['React', 'Next.js', 'NodeJs', 'Postgres', 'Tailwind CSS', 'TypeScript'],
     image: SocialImg,
   },
   {
     name: 'Wallet Ai',
     description:
-      'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience. The site is optimized for performance and SEO, ensuring both functionality and visibility.',
+      'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience.',
     tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'TypeScript'],
     image: walletImg,
   },
