@@ -1,3 +1,7 @@
+import React from 'react';
+import { FaGraduationCap } from 'react-icons/fa6';
+import { SiHiveBlockchain } from 'react-icons/si';
+import { PiDetectiveFill } from 'react-icons/pi';
 import SocialImg from '../../public/images/social-ai.png';
 import walletImg from '../../public/images/wallet-ai.png';
 import SupernovaImg from '../../public/images/supernova.png';
@@ -63,5 +67,32 @@ export const projects = [
       'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience. The site is optimized for performance and SEO, ensuring both functionality and visibility.',
     tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'TypeScript'],
     image: walletImg,
+  },
+] as const;
+
+export const experience = [
+  {
+    title: 'Graduated online bootcamp',
+    location: 'Online',
+    description:
+      'Completed a comprehensive software development program, specializing in full-stack development, gaining proficiency in JavaScript, React, Node.js, and more.',
+    icon: React.createElement(FaGraduationCap),
+    date: '2020',
+  },
+  {
+    title: 'Frontend Web3 Developer',
+    location: 'Dcentralab - Hord',
+    description:
+      'Developed and maintained decentralized web applications, focusing on blockchain integration and user interfaces in the Web3 space.',
+    icon: React.createElement(SiHiveBlockchain),
+    date: '2021 - 2023',
+  },
+  {
+    title: 'Co-founder & Full Stack Developer',
+    location: 'Chain Detective',
+    description:
+      'Built and managed a web3 analytics platform, focusing on blockchain data analysis and delivering insights to users through intuitive web applications.',
+    icon: React.createElement(PiDetectiveFill),
+    date: '2023 - Present',
   },
 ] as const;
