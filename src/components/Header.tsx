@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
 import { links } from '@/lib/data';
-import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
+import { useActiveSectionContext } from '@/contexts/ActiveSection';
 
 export default function Header() {
   const { setActiveTab, activeTab, setTimeOfLastClick } = useActiveSectionContext();

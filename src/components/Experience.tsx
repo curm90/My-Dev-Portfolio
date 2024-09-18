@@ -5,7 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 import SectionHeader from './SectionHeader';
 import { experience } from '@/lib/data';
-import useSectionView from '@/app/hooks/useSectionInView';
+import useSectionView from '@/actions/hooks/useSectionInView';
 
 export default function Experience() {
   const { ref, isInView } = useSectionView('Experience', 0.5);

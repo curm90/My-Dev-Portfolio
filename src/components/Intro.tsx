@@ -6,8 +6,8 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import useSectionView from '@/app/hooks/useSectionInView';
-import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
+import useSectionView from '@/actions/hooks/useSectionInView';
+import { useActiveSectionContext } from '@/contexts/ActiveSection';
 
 export default function Intro() {
   const { ref } = useSectionView('Home', 0.5);

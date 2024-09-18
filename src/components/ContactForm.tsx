@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa6';
-import useSectionView from '@/app/hooks/useSectionInView';
-import { sendEmail } from '@/app/actions/contactForm';
+import useSectionView from '@/actions/hooks/useSectionInView';
+import { sendEmail } from '@/actions/contactForm';
 import SectionHeader from './SectionHeader';
 
 export default function ContactForm() {
