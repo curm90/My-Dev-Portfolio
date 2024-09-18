@@ -31,7 +31,7 @@ export const skills = [
   'SASS',
   'Socket.IO',
   'Microservices Architecture',
-];
+] as const;
 
 export const links = [
   { name: 'Home', link: '#home' },
