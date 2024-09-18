@@ -5,20 +5,11 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
-import { useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
+import { motion } from 'framer-motion';
+import useSectionView from '@/app/hooks/useSectionInView';
 
 export default function Intro() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5 });
-  const { setActiveTab, timeOfLastClick } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (isInView && Date.now() - timeOfLastClick > 1000) {
-      setActiveTab('Home');
-    }
-  }, [isInView, setActiveTab, timeOfLastClick]);
+  const { ref } = useSectionView('Home', 0.5);
 
   return (
     <section ref={ref} id='home' className='scroll-mt-96'>
