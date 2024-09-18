@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SectionHeader from './SectionHeader';
-import useSectionView from '@/actions/hooks/useSectionInView';
+import useSectionView from '@/hooks/useSectionInView';
 
 export default function About() {
   const { ref } = useSectionView('About');

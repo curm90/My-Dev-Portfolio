@@ -6,7 +6,7 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import useSectionView from '@/actions/hooks/useSectionInView';
+import useSectionView from '@/hooks/useSectionInView';
 import { useActiveSectionContext } from '@/contexts/ActiveSection';
 
 export default function Intro() {

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { useActiveSectionContext } from '../../contexts/ActiveSection';
 import type { TSectionName } from '@/types/Section';
+import { useActiveSectionContext } from '@/contexts/ActiveSection';
 
 export default function useSectionView(sectionName: TSectionName = 'Home', amount = 0.75) {
   const ref = useRef(null);

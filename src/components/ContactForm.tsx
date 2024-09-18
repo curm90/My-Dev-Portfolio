@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaPaperPlane } from 'react-icons/fa6';
-import useSectionView from '@/actions/hooks/useSectionInView';
+import useSectionView from '@/hooks/useSectionInView';
 import { sendEmail } from '@/actions/contactForm';
 import SectionHeader from './SectionHeader';
 

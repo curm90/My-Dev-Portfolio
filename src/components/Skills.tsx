@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { skills } from '@/lib/data';
-import useSectionView from '@/actions/hooks/useSectionInView';
+import useSectionView from '@/hooks/useSectionInView';
 import SectionHeader from './SectionHeader';
 
 const fadeInAnimationVariants = {
