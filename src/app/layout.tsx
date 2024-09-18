@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { Toaster } from 'react-hot-toast';
 import BgEffect from '@/components/BgEffect';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import ActiveSectionContextProvider from '../contexts/ActiveSection';
 import './globals.css';
-import { Toaster } from 'react-hot-toast';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Toaster position='top-right' />
+          <Footer />
         </ActiveSectionContextProvider>
       </body>
     </html>
