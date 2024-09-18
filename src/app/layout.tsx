@@ -4,6 +4,7 @@ import BgEffect from '@/components/BgEffect';
 import Header from '@/components/Header';
 import ActiveSectionContextProvider from '../contexts/ActiveSection';
 import './globals.css';
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -36,6 +37,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Toaster position='top-right' />
         </ActiveSectionContextProvider>
       </body>
     </html>

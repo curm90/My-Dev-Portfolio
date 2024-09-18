@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import toast from 'react-hot-toast';
 import useSectionView from '@/hooks/useSectionInView';
 import { sendEmail } from '@/actions/contactForm';
 import SectionHeader from './SectionHeader';
@@ -33,11 +34,11 @@ export default function ContactForm() {
           const { data, error } = await sendEmail(formData);
 
           if (error) {
-            alert(error);
+            toast.error(error);
             return;
           }
 
-          alert('Email sent successfully');
+          toast.success('Email sent successfully');
         }}
       >
         <input
