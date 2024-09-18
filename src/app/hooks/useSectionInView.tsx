@@ -14,5 +14,5 @@ export default function useSectionView(sectionName: TSectionName = 'Home', amoun
     }
   }, [isInView, setActiveTab, timeOfLastClick, sectionName]);
 
-  return { ref };
+  return { ref, isInView };
 }
