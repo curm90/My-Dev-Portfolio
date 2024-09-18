@@ -73,7 +73,7 @@ export default function Intro() {
         <a
           href='/cv.pdf'
           download
-          className='group flex cursor-pointer items-center gap-2 rounded-full bg-gray-50 px-7 py-3 shadow-lg transition hover:scale-105 hover:text-gray-950 focus:scale-105 active:scale-100'
+          className='group flex cursor-pointer items-center gap-2 rounded-full bg-gray-50 px-7 py-3 shadow-lg transition hover:scale-105 hover:text-gray-950 focus:scale-105 active:scale-100 dark:bg-white/10 dark:text-gray-50'
         >
           Download CV <HiDownload className='opacity-60 transition group-hover:translate-y-1' />
         </a>
@@ -82,7 +82,7 @@ export default function Intro() {
             href='https://www.linkedin.com/in/liam-sutton90/'
             rel='noreferer'
             target='_blank'
-            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15]'
+            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15] dark:bg-white/10 dark:text-gray-50'
           >
             <BsLinkedin />
           </a>
@@ -90,7 +90,7 @@ export default function Intro() {
             href='https://github.com/curm90'
             rel='noreferer'
             target='_blank'
-            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15]'
+            className='flex cursor-pointer items-center rounded-full bg-gray-50 p-4 shadow-lg transition hover:scale-[1.15] hover:text-gray-900 focus:scale-[1.15] dark:bg-white/10 dark:text-gray-50'
           >
             <FaGithubSquare />
           </a>
