@@ -4,7 +4,9 @@ import { Toaster } from 'react-hot-toast';
 import BgEffect from '@/components/BgEffect';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ActiveSectionContextProvider from '../contexts/ActiveSection';
+import ThemeSwitch from '@/components/ThemeSwitch';
+import ThemeContextProvider from '@/contexts/ThemeContext';
+import ActiveSectionContextProvider from '@/contexts/ActiveSection';
 import './globals.css';
 
 const geistSans = localFont({
@@ -32,15 +34,18 @@ export default function RootLayout({
   return (
     <html lang='en' className='!scroll-smooth'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative bg-gray-50 pt-28 antialiased sm:pt-36`}
+        className={`${geistSans.variable} ${geistMono.variable} relative bg-gray-50 pt-28 antialiased sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         <BgEffect />
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Toaster position='top-right' />
-          <Footer />
-        </ActiveSectionContextProvider>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Toaster position='top-right' />
+            <Footer />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
