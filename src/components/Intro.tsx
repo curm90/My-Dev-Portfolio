@@ -7,9 +7,11 @@ import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import useSectionView from '@/app/hooks/useSectionInView';
+import { useActiveSectionContext } from '@/app/contexts/ActiveSection';
 
 export default function Intro() {
   const { ref } = useSectionView('Home', 0.5);
+  const { setActiveTab, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section ref={ref} id='home' className='scroll-mt-96'>
@@ -60,6 +62,10 @@ export default function Intro() {
         <Link
           className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-gray-50 shadow-lg outline-none transition hover:scale-105 hover:bg-gray-800 focus:scale-105 active:scale-100'
           href='#contact'
+          onClick={() => {
+            setActiveTab('Contact');
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{' '}
           <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />

@@ -25,7 +25,7 @@ export default function Skills() {
             viewport={{ once: true }}
             custom={index}
             key={index}
-            className='mb-2 rounded-lg border border-black/[0.1] bg-white px-4 py-2 text-center'
+            className='borderBlack mb-2 rounded-lg bg-white px-4 py-2 text-center'
           >
             {skill}
           </motion.li>
