@@ -7,9 +7,9 @@ import ContactFormEmail from '@/email/ContactFormEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function sendEmail(data: FormData) {
-  const message = data.get('message');
-  const email = data.get('email');
+export async function sendEmail(formData: FormData) {
+  const message = formData.get('message');
+  const email = formData.get('email');
 
   if (!validateEmailDataString(message, 500)) {
     return {
@@ -23,8 +23,10 @@ export async function sendEmail(data: FormData) {
     };
   }
 
+  let data;
+
   try {
-    await resend.emails.send({
+    data = await resend.emails.send({
       from: 'Contact form <onboarding@resend.dev>',
       to: 'sutton.liam77@gmail.com',
       subject: 'Hello from Resend',
@@ -35,6 +37,8 @@ export async function sendEmail(data: FormData) {
       }),
     });
   } catch (error: unknown) {
-    return getErrorMessage(error);
+    return { error: getErrorMessage(error) };
   }
+
+  return { data };
 }

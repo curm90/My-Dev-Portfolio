@@ -27,7 +27,19 @@ export default function ContactForm() {
         </a>{' '}
         or through this form
       </p>
-      <form className='mt-10 flex flex-col' action={sendEmail}>
+      <form
+        className='mt-10 flex flex-col'
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            alert(error);
+            return;
+          }
+
+          alert('Email sent successfully');
+        }}
+      >
         <input
           name='email'
           type='email'
