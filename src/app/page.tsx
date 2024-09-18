@@ -1,4 +1,5 @@
 import About from '@/components/About';
+import ContactForm from '@/components/ContactForm';
 import Experience from '@/components/Experience';
 import Intro from '@/components/Intro';
 import Projects from '@/components/Projects';
@@ -14,6 +15,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Experience />
+      <ContactForm />
     </main>
   );
 }
