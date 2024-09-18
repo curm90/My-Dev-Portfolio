@@ -34,14 +34,14 @@ export default function ContactForm() {
           className='borderBlack h-14 rounded-lg p-4'
           placeholder='Your email...'
           required
-          maxLength={100}
+          maxLength={500}
         />
         <textarea
           name='message'
           placeholder='Your message...'
           className='borderBlack my-3 h-52 rounded-lg p-4'
           required
-          maxLength={100}
+          maxLength={5000}
         />
         <button
           className='group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-900 text-white outline transition-all hover:scale-105 hover:bg-gray-800 focus:scale-105 active:scale-100'
