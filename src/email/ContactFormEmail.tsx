@@ -19,10 +19,12 @@ export default function ContactFormEmail({ message, senderEmail }: TContactFormE
       <Head />
       <Preview>New message from your portfolio site</Preview>
       <Tailwind>
-        <Body>
+        <Body className='bg-gray-100 text-gray-950'>
           <Container>
-            <Section>
-              <Heading>You recieved a message from the contact form</Heading>
+            <Section className='borderBlack my-10 rounded-md bg-white px-10 py-4'>
+              <Heading className='leading-tight'>
+                You recieved a message from the contact form
+              </Heading>
               <Text>{message}</Text>
               <Hr />
               <Text>The senders email is: {senderEmail}</Text>
