@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGraduationCap } from 'react-icons/fa6';
+import { FaGraduationCap, FaTooth } from 'react-icons/fa6';
 import { SiHiveBlockchain } from 'react-icons/si';
 import { PiDetectiveFill } from 'react-icons/pi';
 import { SUPERNOVA_URL } from '@/constants/urls';
@@ -176,6 +176,17 @@ export const experience = [
     liveUrl: '#',
     codeUrl: '#',
     icon: React.createElement(PiDetectiveFill),
-    date: '2023 - Present',
+    date: '2023 - 2025',
+  },
+  {
+    title: 'Full Stack Developer & Designer',
+    location: 'Supernova Dental',
+    description:
+      'Designed and developed a modern dental practice website with responsive UI/UX, smooth animations, and seamless appointment booking integration. Built to showcase professional healthcare services with a clean, user-friendly interface.',
+    thumbnail: '',
+    liveUrl: 'https://www.supernovadental.co.uk/',
+    codeUrl: 'https://github.com/Supernova-Dentist/Supernova-Dentist-FE-TS',
+    icon: React.createElement(FaTooth),
+    date: '2024 - Present',
   },
 ] as const;
