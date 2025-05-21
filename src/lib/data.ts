@@ -2,9 +2,7 @@ import React from 'react';
 import { FaGraduationCap } from 'react-icons/fa6';
 import { SiHiveBlockchain } from 'react-icons/si';
 import { PiDetectiveFill } from 'react-icons/pi';
-import SocialImg from '../../public/images/social-ai.png';
-import walletImg from '../../public/images/wallet-ai.png';
-import SupernovaImg from '../../public/images/supernova.png';
+import { SUPERNOVA_URL } from '@/constants/urls';
 
 export const skills = [
   'JavaScript',
@@ -15,7 +13,7 @@ export const skills = [
   'Next.js',
   'Node.js',
   'Express',
-  'GraphQL',
+  'Prisma',
   'REST APIs',
   'MongoDB',
   'PostgreSQL',
@@ -51,23 +49,99 @@ export const projects = [
     name: 'Supernova Dental',
     description:
       'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience.',
+    thumbnail: '',
+    liveUrl: SUPERNOVA_URL,
+    codeUrl: false,
     tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
-    image: SupernovaImg,
+    // image: SupernovaImg,
+    icon: '🦷',
+    year: 2024,
   },
   {
-    name: 'Social Ai',
+    name: 'Hangman',
     description:
-      'A web app designed to track and analyze crypto wallet activity. Users can monitor wallet balances, transactions, and performance trends over time.',
-    tags: ['React', 'Next.js', 'NodeJs', 'Postgres', 'Tailwind CSS', 'TypeScript'],
-    image: SocialImg,
+      ' A fun and interactive hangman game built with vanilla JavaScript, allowing users to guess letters and complete words while keeping track of their attempts.',
+    thumbnail: '',
+    liveUrl: 'https://hangman-vanilla-js-liam.netlify.app/',
+    codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/hangman',
+    tags: ['JavaScript', 'html', 'css'],
+    // image:
+    icon: '🕹️',
+    year: 2024,
   },
   {
-    name: 'Wallet Ai',
+    name: 'Memory Card Game',
     description:
-      'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience.',
-    tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'TypeScript'],
-    image: walletImg,
+      'A simple memory card flip game where users try to match pairs of cards in the least number of turns. The game is built with JavaScript, HTML, and CSS.',
+    thumbnail: '',
+    liveUrl: 'https://memory-card-game-liam.netlify.app/',
+    codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/memory-cards',
+    tags: ['JavaScript', 'html', 'css'],
+    // image: '',
+    icon: '🃏',
+    year: '2024',
   },
+  {
+    name: 'Tic-Tac-Toe',
+    description:
+      'A classic tic-tac-toe game built with JavaScript, HTML, and CSS. Players can enjoy a simple yet engaging experience of the timeless game.',
+    thumbnail: '',
+    liveUrl: 'https://tic-tac-toe-liam.netlify.app/',
+    codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/tic-tac-toe',
+    tags: ['JavaScript', 'html', 'css'],
+    // image: '',
+    icon: '0️⃣',
+    year: '2024',
+  },
+  {
+    name: 'Word Search',
+    description:
+      'A word search puzzle game where users can find hidden words in a grid of letters. The game is built with JavaScript, HTML, and CSS.',
+    thumbnail: '',
+    liveUrl: 'https://word-search-liam.netlify.app/',
+    codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/word-search',
+    tags: ['JavaScript', 'html', 'css'],
+    // image: '',
+    icon: '🔎',
+    year: '2024',
+  },
+
+  // {
+  //   name: 'Crypto Wallet Tracker',
+  //   description:
+  //     'A web app designed to track and analyze crypto wallet activity. Users can monitor wallet balances, transactions, and performance trends over time.',
+  //   thumbnail: '',
+  //   liveUrl: '#',
+  //   codeUrl: '#',
+  //   tags: ['React', 'Next.js', 'NodeJs', 'Postgres', 'Tailwind CSS', 'TypeScript'],
+  //   // image: CryptoImg,
+  //   icon: '💰',
+  //   year: 2024,
+  // },
+  // {
+  //   name: 'Social Ai',
+  //   description:
+  //     'A web app designed to track and analyze crypto wallet activity. Users can monitor wallet balances, transactions, and performance trends over time.',
+  //   thumbnail: '',
+  //   liveUrl: '#',
+  //   codeUrl: '#',
+  //   tags: ['React', 'Next.js', 'NodeJs', 'Postgres', 'Tailwind CSS', 'TypeScript'],
+  //   // image: SocialImg,
+  //   icon: '🔥',
+  //   year: 2024,
+  // },
+  // {
+  //   name: 'Wallet Ai',
+  //   description:
+  //     'A modern, responsive website built for a dental practice, Supernova Dental showcases services, provides appointment scheduling, and offers an intuitive user experience.',
+  //   thumbnail: '',
+  //   liveUrl: '#',
+  //   codeUrl: '#',
+  //   tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'TypeScript'],
+  //   // image: walletImg,
+  //   icon: '🔥',
+  //   year: 2024,
+  // },
 ] as const;
 
 export const experience = [
@@ -76,6 +150,9 @@ export const experience = [
     location: 'Online',
     description:
       'Completed a comprehensive software development program, specializing in full-stack development, gaining proficiency in JavaScript, React, Node.js, and more.',
+    thumbnail: '',
+    liveUrl: '#',
+    codeUrl: '#',
     icon: React.createElement(FaGraduationCap),
     date: '2020',
   },
@@ -84,6 +161,9 @@ export const experience = [
     location: 'Dcentralab - Hord',
     description:
       'Developed and maintained decentralized web applications, focusing on blockchain integration and user interfaces in the Web3 space.',
+    thumbnail: '',
+    liveUrl: '#',
+    codeUrl: '#',
     icon: React.createElement(SiHiveBlockchain),
     date: '2021 - 2023',
   },
@@ -92,6 +172,9 @@ export const experience = [
     location: 'Chain Detective',
     description:
       'Built and managed a web3 analytics platform, focusing on blockchain data analysis and delivering insights to users through intuitive web applications.',
+    thumbnail: '',
+    liveUrl: '#',
+    codeUrl: '#',
     icon: React.createElement(PiDetectiveFill),
     date: '2023 - Present',
   },
