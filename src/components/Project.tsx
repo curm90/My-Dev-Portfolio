@@ -1,13 +1,24 @@
 'use client';
 
-import Image from 'next/image';
+import Link from 'next/link';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
+import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
+import { FiExternalLink } from 'react-icons/fi';
+import { BiCode } from 'react-icons/bi';
 import { projects } from '@/lib/data';
 
 type TProject = (typeof projects)[number];
 
-export default function Project({ name, description, tags, image }: TProject) {
+export default function Project({
+  name,
+  description,
+  tags,
+  icon,
+  codeUrl,
+  liveUrl,
+  year,
+}: TProject) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -20,32 +31,77 @@ export default function Project({ name, description, tags, image }: TProject) {
 
   return (
     <motion.div
-      className='group'
       style={{ scale: scaleProgress, opacity: opacityProgress }}
       ref={ref}
+      className='border-border bg-card hover:border-primary/20 group flex flex-col rounded-lg border p-4 transition-all duration-300 hover:shadow-sm'
     >
-      <article className='relative max-w-[50rem] overflow-hidden rounded-md border border-black/5 bg-gray-100 transition hover:bg-gray-200 sm:h-[21.25rem] sm:group-even:pl-8 dark:bg-white/10 dark:hover:bg-white/20'>
-        <div className='flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[53%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[18rem]'>
-          <h3 className='text-2xl font-semibold'>{name}</h3>
-          <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>{description}</p>
-          <ul className='mt-4 flex flex-wrap gap-2 sm:mt-auto'>
-            {tags.map((tag) => (
-              <li
-                className='rounded-full bg-black/[0.7] px-3 py-2 text-[0.7rem] uppercase tracking-wider text-gray-50 dark:text-white/70'
-                key={tag}
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
+      <div className='mb-3 flex items-start justify-between'>
+        <div className='flex h-8 w-8 items-center justify-center rounded-md bg-gray-200 text-xl'>
+          {icon || <BiCode className='h-4 w-4' />}
         </div>
-        <Image
-          src={image}
-          alt='Project'
-          quality={95}
-          className='absolute -right-32 top-8 hidden w-[28rem] rounded-t-md object-cover shadow-xl transition group-even:-left-36 group-even:right-[initial] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 group-hover:scale-[1.04] group-even:group-hover:translate-x-3 group-even:group-hover:translate-y-3 group-even:group-hover:rotate-2 sm:block'
-        />
-      </article>
+
+        <div className='flex space-x-1'>
+          {/* {featured && (
+            <div className='text-primary flex items-center'>
+              <Bookmark className='h-4 w-4' />
+            </div>
+          )} */}
+          <span className='text-sm text-gray-700'>{year}</span>
+        </div>
+      </div>
+
+      <h3 className='mb-1 text-lg font-semibold text-gray-900'>{name}</h3>
+      <p className='text-muted-foreground text-md mb-3 text-gray-600'>{description}</p>
+
+      <div className='mt-auto'>
+        <div className='mb-6 flex flex-wrap gap-1.5'>
+          {tags.map((tag) => (
+            <span
+              key={tag}
+              className='text-muted-foreground inline-flex items-center rounded-full bg-gray-200 px-2 py-0.5 text-xs font-semibold text-gray-700'
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className='flex items-center justify-between'>
+          <Link
+            href={liveUrl || codeUrl || '#'}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='group inline-flex items-center text-sm font-semibold text-gray-700 transition hover:text-gray-900'
+          >
+            View project
+            <BsArrowUpRight className='ml-1 h-3 w-3 text-gray-700 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5' />
+          </Link>
+
+          <div className='flex items-center gap-2'>
+            {codeUrl && (
+              <a
+                href={codeUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-gray-600 transition-colors hover:text-gray-900'
+                aria-label={`View ${name} code on GitHub`}
+              >
+                <BsGithub className='h-4 w-4' />
+              </a>
+            )}
+            {liveUrl && (
+              <a
+                href={liveUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-gray-600 transition-colors hover:text-gray-900'
+                aria-label={`View ${name} live demo`}
+              >
+                <FiExternalLink className='h-4 w-4' />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 }
