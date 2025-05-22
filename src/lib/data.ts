@@ -58,6 +58,18 @@ export const projects = [
     year: 2024,
   },
   {
+    name: 'Chain Detective',
+    description:
+      'A web3 analytics platform that provides users with insights into blockchain data, enabling them to track and analyze transactions, wallets, and smart contracts.',
+    thumbnail: '',
+    liveUrl: 'https://chain-detective-dex-frontend.pages.dev/',
+    codeUrl: false,
+    tags: ['React', 'NodeJs', 'AlchemySDK', 'Thirdweb', 'Socket.io', 'Postgres', 'Tailwind CSS'],
+    // image: '',
+    icon: '🕵',
+    year: '2023',
+  },
+  {
     name: 'Hangman',
     description:
       ' A fun and interactive hangman game built with vanilla JavaScript, allowing users to guess letters and complete words while keeping track of their attempts.',
