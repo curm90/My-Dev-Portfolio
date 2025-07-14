@@ -76,7 +76,7 @@ export const projects = [
     thumbnail: '',
     liveUrl: 'https://my-snippets-nu.vercel.app/',
     codeUrl: 'https://github.com/curm90/My-Snippets',
-    tags: ['React', 'Next.js', 'NodeJs', 'Prisma', 'Tailwind CSS', 'TypeScript'],
+    tags: ['React', 'Next.js', 'Shadcn', 'Prisma', 'Tailwind CSS', 'TypeScript'],
     // image: '',
     icon: '📑',
     year: 2025,
