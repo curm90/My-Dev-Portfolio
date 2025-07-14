@@ -2,7 +2,12 @@ import React from 'react';
 import { FaGraduationCap, FaTooth } from 'react-icons/fa6';
 import { SiHiveBlockchain } from 'react-icons/si';
 import { PiDetectiveFill } from 'react-icons/pi';
-import { SUPERNOVA_URL } from '@/constants/urls';
+import {
+  CHAIN_DETECTIVE_URL,
+  MY_SNIPPETS_CODE_URL,
+  MY_SNIPPETS_URL,
+  SUPERNOVA_URL,
+} from '@/constants/urls';
 
 export const skills = [
   'JavaScript',
@@ -62,7 +67,7 @@ export const projects = [
     description:
       'A web3 analytics platform that provides users with insights into blockchain data, enabling them to track and analyze transactions, wallets, and smart contracts.',
     thumbnail: '',
-    liveUrl: 'https://chain-detective-dex-frontend.pages.dev/',
+    liveUrl: CHAIN_DETECTIVE_URL,
     codeUrl: false,
     tags: ['React', 'NodeJs', 'AlchemySDK', 'Thirdweb', 'Socket.io', 'Postgres', 'Tailwind CSS'],
     // image: '',
@@ -74,8 +79,8 @@ export const projects = [
     description:
       'A snippet management tool that allows users to save, organize, and share code snippets across various programming languages, enhancing productivity and collaboration.',
     thumbnail: '',
-    liveUrl: 'https://my-snippets-nu.vercel.app/',
-    codeUrl: 'https://github.com/curm90/My-Snippets',
+    liveUrl: MY_SNIPPETS_URL,
+    codeUrl: MY_SNIPPETS_CODE_URL,
     tags: ['React', 'Next.js', 'Shadcn', 'Prisma', 'Tailwind CSS', 'TypeScript'],
     // image: '',
     icon: '📑',
