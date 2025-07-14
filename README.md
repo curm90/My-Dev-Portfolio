@@ -1,4 +1,4 @@
-# 🚀 Liam's Portfolio
+# 🚀 My Portfolio
 
 A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. This portfolio showcases my projects, skills, and professional experience as a Full Stack Developer with expertise in Web3 and blockchain technologies.
 
