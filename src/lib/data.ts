@@ -70,6 +70,18 @@ export const projects = [
     year: '2023',
   },
   {
+    name: 'Snipp',
+    description:
+      'A snippet management tool that allows users to save, organize, and share code snippets across various programming languages, enhancing productivity and collaboration.',
+    thumbnail: '',
+    liveUrl: 'https://my-snippets-nu.vercel.app/',
+    codeUrl: 'https://github.com/curm90/My-Snippets',
+    tags: ['React', 'Next.js', 'Shadcn', 'Prisma', 'Tailwind CSS', 'TypeScript'],
+    // image: '',
+    icon: '📑',
+    year: 2025,
+  },
+  {
     name: 'Hangman',
     description:
       ' A fun and interactive hangman game built with vanilla JavaScript, allowing users to guess letters and complete words while keeping track of their attempts.',
