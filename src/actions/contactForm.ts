@@ -12,15 +12,11 @@ export async function sendEmail(formData: FormData) {
   const email = formData.get('email');
 
   if (!validateEmailDataString(message, 500)) {
-    return {
-      error: 'Invalid message',
-    };
+    return { error: 'Invalid message' };
   }
 
   if (!validateEmailDataString(email, 5000)) {
-    return {
-      error: 'Invalid email',
-    };
+    return { error: 'Invalid email' };
   }
 
   let data;
@@ -29,7 +25,7 @@ export async function sendEmail(formData: FormData) {
     data = await resend.emails.send({
       from: 'Contact form <onboarding@resend.dev>',
       to: 'sutton.liam77@gmail.com',
-      subject: 'Hello from Resend',
+      subject: 'Portfolio Contact Form Submission',
       replyTo: email as string,
       react: React.createElement(ContactFormEmail, {
         message: message as string,
