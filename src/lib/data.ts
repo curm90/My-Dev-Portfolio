@@ -74,7 +74,7 @@ export const projects = [
     year: '2023',
   },
     {
-    name: 'Habit Tracker',
+    name: 'Streak',
     description: 'Built a full-stack Habit Tracker web application that enables users to create an account, log daily habits, and monitor progress over time with dynamic tracking and visual feedback.',
     thumbnail: '',
     liveUrl: HABIT_TRACKER_URL,
