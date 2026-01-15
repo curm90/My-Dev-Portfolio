@@ -4,6 +4,7 @@ import { SiHiveBlockchain } from 'react-icons/si';
 import { PiDetectiveFill } from 'react-icons/pi';
 import {
   CHAIN_DETECTIVE_URL,
+  HABIT_TRACKER_URL,
   MY_SNIPPETS_CODE_URL,
   MY_SNIPPETS_URL,
   SUPERNOVA_URL,
@@ -17,8 +18,9 @@ export const skills = [
   'React',
   'Next.js',
   'Node.js',
-  'Express',
+  'Tanstack',
   'Prisma',
+  'Express',
   'REST APIs',
   'MongoDB',
   'PostgreSQL',
@@ -31,13 +33,10 @@ export const skills = [
   'Chai',
   'Tailwind CSS',
   'Redux',
-  'AWS',
   'Firebase',
   'OAuth',
   'JWT Authentication',
-  'SASS',
   'Socket.IO',
-  'Microservices Architecture',
 ] as const;
 
 export const links = [
@@ -73,6 +72,17 @@ export const projects = [
     // image: '',
     icon: '🕵',
     year: '2023',
+  },
+    {
+    name: 'Habit Tracker',
+    description: 'Built a full-stack Habit Tracker web application that enables users to create an account, log daily habits, and monitor progress over time with dynamic tracking and visual feedback.',
+    thumbnail: '',
+    liveUrl: HABIT_TRACKER_URL,
+    codeUrl: false,
+    tags: ['React', 'Next.js', 'Prisma', 'Shadcn', 'Tanstack', 'Supabase', 'Tailwind CSS', 'TypeScript'],
+    // image: '',
+    icon: '✅',
+    year: '2025',
   },
   {
     name: 'Snipp',
