@@ -1,14 +1,27 @@
 'use client';
 
 import Link from 'next/link';
-import { useRef } from 'react';
-import { useScroll, motion, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import { BiCode } from 'react-icons/bi';
 import { projects } from '@/lib/data';
 
 type TProject = (typeof projects)[number];
+
+const projectAnimationVariants = {
+  initial: { opacity: 0, scale: 0.8, y: 50 },
+  animate: (index: number) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: 0.2 * index,
+      duration: 0.8,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  }),
+};
 
 export default function Project({
   name,
@@ -18,21 +31,15 @@ export default function Project({
   codeUrl,
   liveUrl,
   year,
-}: TProject) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1.33 1'],
-  });
-
-  const scaleProgress = useTransform(scrollYProgress, [0, 1.33], [0.8, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1.33], [0.6, 1]);
-
+  index,
+}: TProject & { index: number }) {
   return (
     <motion.div
-      style={{ scale: scaleProgress, opacity: opacityProgress }}
-      ref={ref}
+      variants={projectAnimationVariants}
+      initial='initial'
+      whileInView='animate'
+      viewport={{ once: true, amount: 0.3 }}
+      custom={index}
       className='bg-card group flex flex-col rounded-lg border border-gray-200 p-4 transition-all duration-300 hover:shadow-sm dark:border-gray-600'
     >
       <div className='mb-3 flex items-start justify-between'>

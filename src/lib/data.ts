@@ -73,13 +73,23 @@ export const projects = [
     icon: '🕵',
     year: '2023',
   },
-    {
-    name: 'Habit Tracker',
-    description: 'Built a full-stack Habit Tracker web application that enables users to create an account, log daily habits, and monitor progress over time with dynamic tracking and visual feedback.',
+  {
+    name: 'Streaks',
+    description:
+      'Built a full-stack Habit Tracker web application that enables users to create an account, log daily habits, and monitor progress over time with dynamic tracking and visual feedback.',
     thumbnail: '',
     liveUrl: HABIT_TRACKER_URL,
     codeUrl: false,
-    tags: ['React', 'Next.js', 'Prisma', 'Shadcn', 'Tanstack', 'Supabase', 'Tailwind CSS', 'TypeScript'],
+    tags: [
+      'React',
+      'Next.js',
+      'Prisma',
+      'Shadcn',
+      'Tanstack',
+      'Supabase',
+      'Tailwind CSS',
+      'TypeScript',
+    ],
     // image: '',
     icon: '✅',
     year: '2025',
