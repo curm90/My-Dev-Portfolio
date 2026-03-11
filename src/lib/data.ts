@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGraduationCap, FaTooth } from 'react-icons/fa6';
 import { SiHiveBlockchain } from 'react-icons/si';
 import { PiDetectiveFill } from 'react-icons/pi';
+import type { ProjectItem } from '@/types/Project';
 import {
   CHAIN_DETECTIVE_URL,
   HABIT_TRACKER_URL,
@@ -48,7 +49,7 @@ export const links = [
   { name: 'Contact', link: '#contact' },
 ] as const;
 
-export const projects = [
+export const projects: ProjectItem[] = [
   {
     name: 'Supernova Dental',
     description:
@@ -58,7 +59,11 @@ export const projects = [
     codeUrl: false,
     tags: ['React', 'Next.js', 'Prisma', 'Tailwind CSS', 'Framer Motion', 'TypeScript'],
     // image: SupernovaImg,
-    icon: '🦷',
+    icon: {
+      kind: 'image',
+      src: '/images/SN-logo.jpg',
+      alt: 'Supernova Dental logo',
+    },
     year: 2024,
   },
   {
@@ -70,7 +75,11 @@ export const projects = [
     codeUrl: false,
     tags: ['React', 'NodeJs', 'AlchemySDK', 'Thirdweb', 'Socket.io', 'Postgres', 'Tailwind CSS'],
     // image: '',
-    icon: '🕵',
+    icon: {
+      kind: 'image',
+      src: '/images/CD-logo.jpg',
+      alt: 'Chain Detective logo',
+    },
     year: '2023',
   },
   {
@@ -91,7 +100,11 @@ export const projects = [
       'TypeScript',
     ],
     // image: '',
-    icon: '✅',
+    icon: {
+      kind: 'image',
+      src: '/images/streaks-logo.png',
+      alt: 'Streaks logo',
+    },
     year: '2025',
   },
   {
@@ -103,7 +116,11 @@ export const projects = [
     codeUrl: MY_SNIPPETS_CODE_URL,
     tags: ['React', 'Next.js', 'Shadcn', 'Prisma', 'Tailwind CSS', 'TypeScript'],
     // image: '',
-    icon: '📑',
+    icon: {
+      kind: 'image',
+      src: '/images/snipp-logo.jpg',
+      alt: 'Snipp logo',
+    },
     year: 2025,
   },
   {
@@ -115,7 +132,7 @@ export const projects = [
     codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/hangman',
     tags: ['JavaScript', 'html', 'css'],
     // image:
-    icon: '🕹️',
+    icon: { kind: 'emoji', value: '🕹️' },
     year: 2024,
   },
   {
@@ -127,7 +144,7 @@ export const projects = [
     codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/memory-cards',
     tags: ['JavaScript', 'html', 'css'],
     // image: '',
-    icon: '🃏',
+    icon: { kind: 'emoji', value: '🃏' },
     year: '2024',
   },
   {
@@ -139,7 +156,7 @@ export const projects = [
     codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/tic-tac-toe',
     tags: ['JavaScript', 'html', 'css'],
     // image: '',
-    icon: '0️⃣',
+    icon: { kind: 'emoji', value: '0️⃣' },
     year: '2024',
   },
   {
@@ -151,7 +168,7 @@ export const projects = [
     codeUrl: 'https://github.com/curm90/Toy-Projects/tree/main/word-search',
     tags: ['JavaScript', 'html', 'css'],
     // image: '',
-    icon: '🔎',
+    icon: { kind: 'emoji', value: '🔎' },
     year: '2024',
   },
 
@@ -191,7 +208,7 @@ export const projects = [
   //   icon: '🔥',
   //   year: 2024,
   // },
-] as const;
+];
 
 export const experience = [
   {

@@ -1,26 +1,23 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import { BiCode } from 'react-icons/bi';
-import { projects } from '@/lib/data';
-
-type TProject = (typeof projects)[number];
+import type { ProjectItem } from '@/types/Project';
 
 const projectAnimationVariants = {
-  initial: { opacity: 0, scale: 0.8, y: 50 },
-  animate: (index: number) => ({
+  hidden: { opacity: 0, y: 18 },
+  visible: {
     opacity: 1,
-    scale: 1,
     y: 0,
     transition: {
-      delay: 0.2 * index,
-      duration: 0.8,
-      ease: [0.25, 0.46, 0.45, 0.94],
+      duration: 0.35,
+      ease: 'easeOut',
     },
-  }),
+  },
 };
 
 export default function Project({
@@ -31,20 +28,27 @@ export default function Project({
   codeUrl,
   liveUrl,
   year,
-  index,
-}: TProject & { index: number }) {
+}: ProjectItem) {
   return (
     <motion.div
       variants={projectAnimationVariants}
-      initial='initial'
-      whileInView='animate'
-      viewport={{ once: true, amount: 0.3 }}
-      custom={index}
       className='bg-card group flex flex-col rounded-lg border border-gray-200 p-4 transition-all duration-300 hover:shadow-sm dark:border-gray-600'
     >
       <div className='mb-3 flex items-start justify-between'>
         <div className='flex h-8 w-8 items-center justify-center rounded-md bg-gray-200 text-xl dark:bg-gray-600'>
-          {icon || <BiCode className='h-4 w-4' />}
+          {icon.kind === 'image' ? (
+            <Image
+              src={icon.src}
+              alt={icon.alt}
+              width={24}
+              height={24}
+              className='h-6 w-6 rounded-sm object-contain'
+            />
+          ) : icon.kind === 'emoji' ? (
+            <span aria-label='project icon'>{icon.value}</span>
+          ) : (
+            <BiCode className='h-4 w-4' />
+          )}
         </div>
 
         <div className='flex space-x-1'>
