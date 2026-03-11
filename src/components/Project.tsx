@@ -1,13 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
 import { FiExternalLink } from 'react-icons/fi';
 import { BiCode } from 'react-icons/bi';
-import { projects } from '@/lib/data';
-
-type TProject = (typeof projects)[number];
+import type { ProjectItem } from '@/types/Project';
 
 const projectAnimationVariants = {
   hidden: { opacity: 0, y: 18 },
@@ -29,7 +28,7 @@ export default function Project({
   codeUrl,
   liveUrl,
   year,
-}: TProject) {
+}: ProjectItem) {
   return (
     <motion.div
       variants={projectAnimationVariants}
@@ -37,7 +36,19 @@ export default function Project({
     >
       <div className='mb-3 flex items-start justify-between'>
         <div className='flex h-8 w-8 items-center justify-center rounded-md bg-gray-200 text-xl dark:bg-gray-600'>
-          {icon || <BiCode className='h-4 w-4' />}
+          {icon.kind === 'image' ? (
+            <Image
+              src={icon.src}
+              alt={icon.alt}
+              width={24}
+              height={24}
+              className='h-6 w-6 rounded-sm object-contain'
+            />
+          ) : icon.kind === 'emoji' ? (
+            <span aria-label='project icon'>{icon.value}</span>
+          ) : (
+            <BiCode className='h-4 w-4' />
+          )}
         </div>
 
         <div className='flex space-x-1'>
