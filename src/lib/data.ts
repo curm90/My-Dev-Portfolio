@@ -5,6 +5,7 @@ import { PiDetectiveFill } from 'react-icons/pi';
 import type { ProjectItem } from '@/types/Project';
 import {
   CHAIN_DETECTIVE_URL,
+  GLEANER_URL,
   HABIT_TRACKER_URL,
   MY_SNIPPETS_CODE_URL,
   MY_SNIPPETS_URL,
@@ -104,6 +105,31 @@ export const projects: ProjectItem[] = [
       kind: 'image',
       src: '/images/streaks-logo.png',
       alt: 'Streaks logo',
+    },
+    year: '2025',
+  },
+  {
+    name: 'Gleaner',
+    description:
+      'Gleaner is a tool that lets you search for online articles and news, then use Firecrawl to scrape their content. You can also directly input a URL to scrape any webpage, after which the app generates an AI-powered summary and relevant tags for the content.',
+    thumbnail: '',
+    liveUrl: GLEANER_URL,
+    codeUrl: false,
+    tags: [
+      'React',
+      'Next.js',
+      'Prisma',
+      'Shadcn',
+      'Tanstack',
+      'Supabase',
+      'Tailwind CSS',
+      'TypeScript',
+    ],
+    // image: '',
+    icon: {
+      kind: 'image',
+      src: '/images/gleaner.png',
+      alt: 'Gleaner logo',
     },
     year: '2025',
   },
