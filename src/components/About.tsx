@@ -14,7 +14,7 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      className='mb-28 mt-28 max-w-[45rem] scroll-mt-28 text-center text-lg leading-8 text-gray-700 sm:mt-0 dark:text-gray-400'
+      className='mb-28 mt-28 max-w-[45rem] scroll-mt-28 text-center text-base leading-7 text-gray-700 dark:text-gray-400 sm:mt-0 sm:text-[1.02rem]'
     >
       <SectionHeader header='About me' />
       <p className='mb-3'>
@@ -23,22 +23,20 @@ export default function About() {
           className='font-semibold italic underline'
           href='https://www.bloomtech.com/'
           target='_blank'
-          rel='noreferer'
+          rel='noreferrer'
         >
           BloomTech Institute of Technology
         </a>
-        , where I solidified my coding skills after spending a year teaching myself part-time. I
-        quickly realized I needed more structure to push my learning forward, and BloomTech provided
-        the foundation I needed. I love the process of{' '}
-        <span className='font-semibold'>problem-solving</span>, the satisfaction of finally getting
-        it to work is unmatched. My primary tech stack includes{' '}
-        <span className='font-semibold'> React, Next.js, and Node.js</span>, and I&apos;m always
-        eager to learn new technologies and grow as a developer. Im currently looking for a{' '}
-        <span className='font-semibold'>full-time position</span> as a full-stack developer.
+        . I spent a year teaching myself part-time before joining, and that gave me a strong
+        foundation. I enjoy <span className='font-semibold'>problem-solving</span> and building with{' '}
+        <span className='font-semibold'>React, Next.js, and Node.js</span>. I&apos;m currently
+        looking for <span className='font-semibold'>my next role</span> as a frontend or full-stack
+        developer.
       </p>
       <p>
-        <span className='italic'>Outside of coding</span>, I&apos;m passionate about reading,
-        cooking, going on mountain hikes, working out, and I&apos;m a bit of a documentary nut too.
+        <span className='italic'>Outside of coding</span>, I love reading, cooking, and learning
+        about health optimisation. I&apos;m a big believer in daily movement, from cardio and gym
+        sessions to yoga, hiking, and swimming.
       </p>
     </motion.section>
   );
