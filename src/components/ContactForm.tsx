@@ -25,8 +25,8 @@ export default function ContactForm() {
       <SectionHeader header='Contact me' />
       <p className='-mt-6 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
-        <a href='mailto:sutton.liam77@gmail.com' className='underline'>
-          sutton.liam77@gmail.com
+        <a href='mailto:liam.sutton@atomicmail.io' className='underline'>
+          liam.sutton@atomicmail.io
         </a>{' '}
         or through this form
       </p>
